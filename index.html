@@ -1,47 +1,96 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kvitto — Integritetspolicy</title>
+<title>Kvitto — Privacy Policy</title>
 <style>
   body { font-family: -apple-system, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 24px; color: #111; line-height: 1.7; }
   h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
   h2 { font-size: 18px; font-weight: 600; margin-top: 32px; }
-  p { color: #333; margin: 8px 0; }
+  p, li { color: #333; margin: 8px 0; }
   a { color: #22c55e; }
+  .lang { display: inline-block; margin-right: 16px; font-weight: 600; cursor: pointer; }
+  .section { display: none; }
+  .section.active { display: block; }
 </style>
 </head>
 <body>
+
+<p>
+  <span class="lang" onclick="show('sv')" id="btn-sv">🇸🇪 Svenska</span>
+  <span class="lang" onclick="show('en')" id="btn-en">🇬🇧 English</span>
+</p>
+
+<div class="section active" id="sv">
 <h1>Integritetspolicy för Kvitto</h1>
-<p>Senast uppdaterad: 2026-05-31</p>
+<p>Senast uppdaterad: 2026-06-02</p>
 
 <h2>Vilka uppgifter samlar vi in?</h2>
-<p>Kvitto samlar in följande uppgifter:</p>
-<p>— E-postadress (vid registrering)</p>
-<p>— Bilder på kvitton (bearbetas tillfälligt av AI, lagras ej)</p>
-<p>— Extraherad kvittoinformation (butik, datum, artiklar, priser)</p>
+<p>— E-postadress (vid registrering)<br>
+— Bilder på kvitton (bearbetas tillfälligt av AI, lagras ej)<br>
+— Extraherad kvittoinformation (butik, datum, artiklar, priser)</p>
 
 <h2>Hur använder vi dina uppgifter?</h2>
-<p>Dina uppgifter används enbart för att tillhandahålla appens funktioner — spåra utgifter och visa historik. Vi säljer aldrig dina uppgifter till tredje part.</p>
+<p>Dina uppgifter används enbart för att tillhandahålla appens funktioner. Vi säljer aldrig dina uppgifter till tredje part.</p>
 
 <h2>AI-bearbetning</h2>
-<p>Kvittobilder skickas till Anthropic Claude API för textextraktion. Bilderna lagras inte permanent — endast den extraherade texten sparas.</p>
+<p>Kvittobilder skickas till Anthropic Claude API för textextraktion. Bilderna lagras inte permanent — endast den extraherade texten sparas. Anthropic tränar inte sina modeller på API-data som standard. Bilder sparas inte efter bearbetning.</p>
 
 <h2>Datalagring</h2>
-<p>Dina kvitton lagras säkert i Supabase med kryptering. Du kan när som helst radera ditt konto och all tillhörande data via appens inställningar.</p>
+<p>Dina kvitton lagras säkert i Supabase med kryptering. Vi behåller din data så länge ditt konto är aktivt. Vid kontoborttagning raderas all data inom 30 dagar. Du kan när som helst radera ditt konto via appens inställningar.</p>
+
+<h2>Cookies</h2>
+<p>Kvitto-appen använder inga cookies. Vår webbplats använder inga spårningscookies.</p>
 
 <h2>Dina rättigheter (GDPR)</h2>
-<p>Du har rätt att:</p>
-<p>— Begära ut dina uppgifter</p>
-<p>— Rätta felaktiga uppgifter</p>
-<p>— Radera ditt konto och all data</p>
-<p>— Invända mot behandling</p>
-
-<h2>Kontakt</h2>
-<p>Vid frågor, kontakta oss på: <a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+<p>Du har rätt att begära ut, rätta eller radera dina uppgifter, samt invända mot behandling. Kontakta oss så hjälper vi dig.</p>
 
 <h2>Ändringar</h2>
-<p>Vi kan uppdatera denna policy. Fortsatt användning av appen innebär att du godkänner eventuella ändringar.</p>
+<p>Vid väsentliga ändringar av denna policy meddelas du via e-post eller i appen.</p>
+
+<h2>Kontakt</h2>
+<p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+</div>
+
+<div class="section" id="en">
+<h1>Privacy Policy — Kvitto</h1>
+<p>Last updated: 2026-06-02</p>
+
+<h2>What data do we collect?</h2>
+<p>— Email address (on registration)<br>
+— Receipt images (processed temporarily by AI, not stored)<br>
+— Extracted receipt data (store, date, items, prices)</p>
+
+<h2>How do we use your data?</h2>
+<p>Your data is used solely to provide the app's features. We never sell your data to third parties.</p>
+
+<h2>AI processing</h2>
+<p>Receipt images are sent to Anthropic's Claude API for text extraction. Images are not stored permanently — only the extracted text is saved. Anthropic does not train its models on API data by default. Images are not retained after processing.</p>
+
+<h2>Data storage</h2>
+<p>Your receipts are stored securely in Supabase with encryption. We retain your data for as long as your account is active. Upon account deletion, all data is removed within 30 days. You can delete your account at any time from the app settings.</p>
+
+<h2>Cookies</h2>
+<p>The Kvitto app uses no cookies. Our website uses no tracking cookies.</p>
+
+<h2>Your rights (GDPR)</h2>
+<p>You have the right to access, correct, or delete your data, and to object to processing. Contact us and we will help you.</p>
+
+<h2>Changes</h2>
+<p>For significant changes to this policy, we will notify you by email or within the app.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+</div>
+
+<script>
+function show(lang) {
+  document.getElementById('sv').classList.remove('active');
+  document.getElementById('en').classList.remove('active');
+  document.getElementById(lang).classList.add('active');
+}
+</script>
+
 </body>
 </html>
