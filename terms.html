@@ -8,11 +8,57 @@
   body { font-family: -apple-system, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 24px; color: #111; line-height: 1.7; }
   h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
   h2 { font-size: 18px; font-weight: 600; margin-top: 32px; }
-  p { color: #333; margin: 8px 0; }
+  p, li { color: #333; margin: 8px 0; }
   a { color: #22c55e; }
+  .lang { display: inline-block; margin-right: 16px; font-weight: 600; cursor: pointer; }
+  .section { display: none; }
+  .section.active { display: block; }
 </style>
 </head>
 <body>
+
+<p>
+  <span class="lang" onclick="show('sv')" id="btn-sv">🇸🇪 Svenska</span>
+  <span class="lang" onclick="show('en')" id="btn-en">🇬🇧 English</span>
+</p>
+
+<div class="section active" id="sv">
+<h1>Användarvillkor — Kvitto</h1>
+<p>Senast uppdaterad: 2026-06-02</p>
+<p>Genom att använda Kvitto godkänner du dessa villkor.</p>
+
+<h2>1. Tjänsten</h2>
+<p>Kvitto är en app för kvittoskanning och utgiftsspårning utvecklad av WASP Studios. Vi använder AI för att extrahera data från kvittobilderna.</p>
+
+<h2>2. Ditt konto</h2>
+<p>Du ansvarar för att hålla dina inloggningsuppgifter säkra. Du måste vara minst 13 år för att använda Kvitto.</p>
+
+<h2>3. Acceptabel användning</h2>
+<p>Du får inte använda Kvitto för att skanna dokument som inte tillhör dig, försöka dekompilera appen, eller kringgå gratisbegränsningen på teknisk väg.</p>
+
+<h2>4. Gratis och premiumabonnemang</h2>
+<p>Gratisanvändare får 10 skanningar per månad. Premiumanvändare får obegränsat antal skanningar. Vi förbehåller oss rätten att ändra prissättningen med rimlig förvarning.</p>
+
+<h2>5. Data och integritet</h2>
+<p>Vi lagrar dina kvittodata säkert. Vi säljer inte dina data. Se vår <a href="https://mackzy23.github.io/kvitto-privacy/">Integritetspolicy</a> för fullständig information.</p>
+
+<h2>6. Immateriella rättigheter</h2>
+<p>Kvitto och allt dess innehåll ägs av WASP Studios. Du får inte kopiera, modifiera eller distribuera vår app utan tillstånd.</p>
+
+<h2>7. Uppsägning</h2>
+<p>Vi förbehåller oss rätten att stänga av eller avsluta konton som bryter mot dessa villkor.</p>
+
+<h2>8. Ansvarsfriskrivning</h2>
+<p>Kvitto tillhandahålls i befintligt skick. Vi ansvarar inte för ekonomiska beslut fattade baserat på data extraherad av appen. Verifiera alltid viktiga uppgifter manuellt.</p>
+
+<h2>9. Ändringar</h2>
+<p>Vi kan uppdatera dessa villkor. Vid väsentliga ändringar meddelas du via e-post eller i appen.</p>
+
+<h2>10. Kontakt</h2>
+<p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+</div>
+
+<div class="section" id="en">
 <h1>Terms of Service — Kvitto</h1>
 <p>Last updated: 2026-06-02</p>
 <p>By using Kvitto you agree to these terms. If you disagree, do not use the app.</p>
@@ -24,7 +70,7 @@
 <p>You are responsible for keeping your account credentials secure. You must be at least 13 years old to use Kvitto.</p>
 
 <h2>3. Acceptable Use</h2>
-<p>You may not use Kvitto to scan documents that don't belong to you, attempt to reverse engineer the app, or abuse the free scan limit through technical means.</p>
+<p>You may not use Kvitto to scan documents that don't belong to you, attempt to reverse engineer the app, or bypass the free scan limit through technical means.</p>
 
 <h2>4. Free and Premium Tiers</h2>
 <p>Free users receive 10 scans per month. Premium users receive unlimited scans. We reserve the right to change pricing with reasonable notice.</p>
@@ -42,9 +88,19 @@
 <p>Kvitto is provided as-is. We are not liable for financial decisions made based on data extracted by the app. Always verify important figures manually.</p>
 
 <h2>9. Changes</h2>
-<p>We may update these terms. Continued use of the app means you accept the updated terms.</p>
+<p>We may update these terms. For significant changes, we will notify you by email or within the app.</p>
 
 <h2>10. Contact</h2>
-<p>Questions? Contact us at <a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+<p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+</div>
+
+<script>
+function show(lang) {
+  document.getElementById('sv').classList.remove('active');
+  document.getElementById('en').classList.remove('active');
+  document.getElementById(lang).classList.add('active');
+}
+</script>
+
 </body>
 </html>
