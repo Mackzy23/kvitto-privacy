@@ -9,7 +9,7 @@
   h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
   h2 { font-size: 18px; font-weight: 600; margin-top: 32px; }
   p, li { color: #333; margin: 8px 0; }
-  a { color: #22c55e; }
+  a { color: #14b8a6; }
   .lang { display: inline-block; margin-right: 16px; font-weight: 600; cursor: pointer; }
   .section { display: none; }
   .section.active { display: block; }
@@ -24,12 +24,14 @@
 
 <div class="section active" id="sv">
 <h1>Integritetspolicy för Kvitto</h1>
-<p>Senast uppdaterad: 2026-06-02</p>
+<p>Senast uppdaterad: 2026-06-04</p>
 
 <h2>Vilka uppgifter samlar vi in?</h2>
 <p>— E-postadress (vid registrering)<br>
 — Bilder på kvitton (bearbetas tillfälligt av AI, lagras ej)<br>
-— Extraherad kvittoinformation (butik, datum, artiklar, priser)</p>
+— Extraherad kvittoinformation (butik, datum, artiklar, priser)<br>
+— Anonym användningsdata (via PostHog Analytics)<br>
+— Felrapporter (via Sentry)</p>
 
 <h2>Hur använder vi dina uppgifter?</h2>
 <p>Dina uppgifter används enbart för att tillhandahålla appens funktioner. Vi säljer aldrig dina uppgifter till tredje part.</p>
@@ -37,8 +39,14 @@
 <h2>AI-bearbetning</h2>
 <p>Kvittobilder skickas till Anthropic Claude API för textextraktion. Bilderna lagras inte permanent — endast den extraherade texten sparas. Anthropic tränar inte sina modeller på API-data som standard. Bilder sparas inte efter bearbetning.</p>
 
-<h2>Datalagring</h2>
-<p>Dina kvitton lagras säkert i Supabase med kryptering. Vi behåller din data så länge ditt konto är aktivt. Vid kontoborttagning raderas all data inom 30 dagar. Du kan när som helst radera ditt konto via appens inställningar.</p>
+<h2>Datalagring och kvarhållning</h2>
+<p>Dina kvitton lagras säkert i Supabase med kryptering. Kvittohistorik sparas i <strong>12 månader</strong> från skanningsdatumet, varefter de raderas automatiskt. Du kan exportera dina kvitton som CSV när som helst innan de raderas. Vid kontoborttagning raderas all data inom 30 dagar. Du kan när som helst radera ditt konto via appens inställningar.</p>
+
+<h2>Analys och felrapportering</h2>
+<p>Vi använder PostHog (EU-server) för anonym användaranalys — t.ex. hur många som använder olika funktioner — för att förbättra appen. Ingen personlig information kopplas till dessa data. Vi använder Sentry för automatisk felrapportering, vilket hjälper oss att snabbt identifiera och åtgärda buggar. Felrapporter kan innehålla teknisk information om enheten men ingen personlig data.</p>
+
+<h2>Prenumerationer och betalningar</h2>
+<p>Betalningar hanteras av Google Play och RevenueCat. Vi lagrar aldrig kortuppgifter eller betalningsinformation direkt.</p>
 
 <h2>Cookies</h2>
 <p>Kvitto-appen använder inga cookies. Vår webbplats använder inga spårningscookies.</p>
@@ -55,12 +63,14 @@
 
 <div class="section" id="en">
 <h1>Privacy Policy — Kvitto</h1>
-<p>Last updated: 2026-06-02</p>
+<p>Last updated: 2026-06-04</p>
 
 <h2>What data do we collect?</h2>
 <p>— Email address (on registration)<br>
 — Receipt images (processed temporarily by AI, not stored)<br>
-— Extracted receipt data (store, date, items, prices)</p>
+— Extracted receipt data (store, date, items, prices)<br>
+— Anonymous usage data (via PostHog Analytics)<br>
+— Error reports (via Sentry)</p>
 
 <h2>How do we use your data?</h2>
 <p>Your data is used solely to provide the app's features. We never sell your data to third parties.</p>
@@ -68,8 +78,14 @@
 <h2>AI processing</h2>
 <p>Receipt images are sent to Anthropic's Claude API for text extraction. Images are not stored permanently — only the extracted text is saved. Anthropic does not train its models on API data by default. Images are not retained after processing.</p>
 
-<h2>Data storage</h2>
-<p>Your receipts are stored securely in Supabase with encryption. We retain your data for as long as your account is active. Upon account deletion, all data is removed within 30 days. You can delete your account at any time from the app settings.</p>
+<h2>Data storage and retention</h2>
+<p>Your receipts are stored securely in Supabase with encryption. Receipt history is retained for <strong>12 months</strong> from the date of scanning, after which it is automatically deleted. You can export your receipts as CSV at any time before deletion. Upon account deletion, all data is removed within 30 days. You can delete your account at any time from the app settings.</p>
+
+<h2>Analytics and error reporting</h2>
+<p>We use PostHog (EU server) for anonymous usage analytics — such as which features are used — to help us improve the app. No personal information is linked to this data. We use Sentry for automatic error reporting, which helps us quickly identify and fix bugs. Error reports may contain technical device information but no personal data.</p>
+
+<h2>Subscriptions and payments</h2>
+<p>Payments are handled by Google Play and RevenueCat. We never store card details or payment information directly.</p>
 
 <h2>Cookies</h2>
 <p>The Kvitto app uses no cookies. Our website uses no tracking cookies.</p>
