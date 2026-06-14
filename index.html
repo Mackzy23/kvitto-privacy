@@ -24,35 +24,51 @@
 
 <div class="section active" id="sv">
 <h1>Integritetspolicy för Kvitto</h1>
-<p>Senast uppdaterad: 2026-06-04</p>
+<p>Senast uppdaterad: 2026-06-14</p>
 
 <h2>Vilka uppgifter samlar vi in?</h2>
 <p>— E-postadress (vid registrering)<br>
-— Bilder på kvitton (bearbetas tillfälligt av AI, lagras ej)<br>
+— Bilder på kvitton (bearbetas tillfälligt av AI, lagras ej i molnet)<br>
 — Extraherad kvittoinformation (butik, datum, artiklar, priser)<br>
+— Vidarebefordrade e-postkvitton (innehåll bearbetas för att extrahera kvittodata, rådata lagras ej)<br>
+— Garantiinformation (produktnamn, inköpsdatum, garantilängd)<br>
+— Prishistorik per artikel (anonymt aggregerad)<br>
+— Familjedelningsdata (kvitton och garantier delade inom familjegrupp)<br>
+— Utgiftssplittar (kvittokostnader delade mellan familjemedlemmar)<br>
+— Anpassade kategorier och mappar (synkroniserade till molnet)<br>
 — Anonym användningsdata (via PostHog Analytics)<br>
-— Felrapporter (via Sentry)</p>
+— Felrapporter (via Sentry)<br>
+— Senaste appöppning (lagras lokalt för påminnelsenotiser)</p>
 
 <h2>Hur använder vi dina uppgifter?</h2>
 <p>Dina uppgifter används enbart för att tillhandahålla appens funktioner. Vi säljer aldrig dina uppgifter till tredje part.</p>
 
 <h2>AI-bearbetning</h2>
-<p>Kvittobilder skickas till Anthropic Claude API för textextraktion. Bilderna lagras inte permanent — endast den extraherade texten sparas. Anthropic tränar inte sina modeller på API-data som standard. Bilder sparas inte efter bearbetning.</p>
+<p>Kvittobilder och extraherad kvittodata skickas till Anthropic Claude API för textextraktion och AI-coach-insikter. Bilderna lagras inte permanent — endast den extraherade texten sparas. Coach-chatkonversationer bearbetas av Anthropic API men lagras inte i sin helhet. Anthropic tränar inte sina modeller på API-data som standard.</p>
+
+<h2>Reklam</h2>
+<p>Gratisversionen av Kvitto visar annonser via Google AdMob. AdMob kan samla in reklamidentifierare och användningsdata för att visa relevanta annonser. Premiumanvändare ser inga annonser. Du kan hantera dina annonsinställningar i enhetens systeminställningar.</p>
 
 <h2>Datalagring och kvarhållning</h2>
-<p>Dina kvitton lagras säkert i Supabase med kryptering. Kvittohistorik sparas i <strong>12 månader</strong> från skanningsdatumet, varefter de raderas automatiskt. Du kan exportera dina kvitton som CSV när som helst innan de raderas. Vid kontoborttagning raderas all data inom 30 dagar. Du kan när som helst radera ditt konto via appens inställningar.</p>
+<p>Dina kvitton lagras säkert i Supabase med kryptering. Kvittohistorik sparas i <strong>12 månader</strong> från skanningsdatumet, varefter de raderas automatiskt. Kvittofotografier lagras enbart lokalt på enheten och laddas aldrig upp till molnet. Vid avinstallation eller kontoborttagning raderas lokala foton permanent. Du kan exportera dina kvitton som CSV, JSON eller PDF när som helst. Vid kontoborttagning raderas all molndata inom 30 dagar. Du kan när som helst radera ditt konto via appens inställningar.</p>
+
+<h2>Familjedelning</h2>
+<p>Om du använder familjedelning delas dina kvitton och garantier med medlemmar i din familjegrupp. Familjemedlemmar kan se delade kvitton och garantier men inte redigera eller radera varandras data. Du kan lämna eller upplösa familjegruppen när som helst via inställningarna.</p>
 
 <h2>Analys och felrapportering</h2>
 <p>Vi använder PostHog (EU-server) för anonym användaranalys — t.ex. hur många som använder olika funktioner — för att förbättra appen. Ingen personlig information kopplas till dessa data. Vi använder Sentry för automatisk felrapportering, vilket hjälper oss att snabbt identifiera och åtgärda buggar. Felrapporter kan innehålla teknisk information om enheten men ingen personlig data.</p>
 
+<h2>Notiser och påminnelser</h2>
+<p>Kvitto skickar push-notiser för veckliga AI-coach-insikter, budgetvarningar, garantipåminnelser och aktivitetspåminnelser. Du kan stänga av alla notiser i appens inställningar eller enhetens systeminställningar.</p>
+
 <h2>Prenumerationer och betalningar</h2>
-<p>Betalningar hanteras av Google Play och RevenueCat. Vi lagrar aldrig kortuppgifter eller betalningsinformation direkt.</p>
+<p>Betalningar hanteras av Google Play, App Store och RevenueCat. Vi lagrar aldrig kortuppgifter eller betalningsinformation direkt.</p>
 
 <h2>Cookies</h2>
 <p>Kvitto-appen använder inga cookies. Vår webbplats använder inga spårningscookies.</p>
 
 <h2>Dina rättigheter (GDPR)</h2>
-<p>Du har rätt att begära ut, rätta eller radera dina uppgifter, samt invända mot behandling. Kontakta oss så hjälper vi dig.</p>
+<p>Du har rätt att begära ut, rätta eller radera dina uppgifter, samt invända mot behandling. Du kan radera ditt konto och all tillhörande data direkt i appen under Inställningar → Konto → Radera konto. Kontakta oss för övriga förfrågningar.</p>
 
 <h2>Ändringar</h2>
 <p>Vid väsentliga ändringar av denna policy meddelas du via e-post eller i appen.</p>
@@ -63,35 +79,51 @@
 
 <div class="section" id="en">
 <h1>Privacy Policy — Kvitto</h1>
-<p>Last updated: 2026-06-04</p>
+<p>Last updated: 2026-06-14</p>
 
 <h2>What data do we collect?</h2>
 <p>— Email address (on registration)<br>
-— Receipt images (processed temporarily by AI, not stored)<br>
+— Receipt images (processed temporarily by AI, not stored in cloud)<br>
 — Extracted receipt data (store, date, items, prices)<br>
+— Forwarded email receipts (content processed to extract receipt data, raw email not stored)<br>
+— Warranty information (product name, purchase date, warranty duration)<br>
+— Item price history (anonymously aggregated)<br>
+— Family sharing data (receipts and warranties shared within family group)<br>
+— Expense splits (receipt costs shared between family members)<br>
+— Custom categories and folders (synced to cloud)<br>
 — Anonymous usage data (via PostHog Analytics)<br>
-— Error reports (via Sentry)</p>
+— Error reports (via Sentry)<br>
+— Last app open date (stored locally for re-engagement notifications)</p>
 
 <h2>How do we use your data?</h2>
 <p>Your data is used solely to provide the app's features. We never sell your data to third parties.</p>
 
 <h2>AI processing</h2>
-<p>Receipt images are sent to Anthropic's Claude API for text extraction. Images are not stored permanently — only the extracted text is saved. Anthropic does not train its models on API data by default. Images are not retained after processing.</p>
+<p>Receipt images and extracted receipt data are sent to Anthropic's Claude API for text extraction and AI coach insights. Images are not stored permanently — only the extracted text is saved. Coach chat conversations are processed by Anthropic's API but not stored in full. Anthropic does not train its models on API data by default.</p>
+
+<h2>Advertising</h2>
+<p>The free version of Kvitto displays advertisements via Google AdMob. AdMob may collect advertising identifiers and usage data to serve relevant ads. Premium users see no ads. You can manage your ad preferences in your device system settings.</p>
 
 <h2>Data storage and retention</h2>
-<p>Your receipts are stored securely in Supabase with encryption. Receipt history is retained for <strong>12 months</strong> from the date of scanning, after which it is automatically deleted. You can export your receipts as CSV at any time before deletion. Upon account deletion, all data is removed within 30 days. You can delete your account at any time from the app settings.</p>
+<p>Your receipts are stored securely in Supabase with encryption. Receipt history is retained for <strong>12 months</strong> from the date of scanning, after which it is automatically deleted. Receipt photos are stored locally on your device only and are never uploaded to the cloud. Upon uninstall or account deletion, local photos are permanently removed. You can export your receipts as CSV, JSON or PDF at any time. Upon account deletion, all cloud data is removed within 30 days. You can delete your account at any time from the app settings.</p>
+
+<h2>Family sharing</h2>
+<p>If you use family sharing, your receipts and warranties are shared with members of your family group. Family members can view shared receipts and warranties but cannot edit or delete each other's data. You can leave or dissolve the family group at any time from settings.</p>
 
 <h2>Analytics and error reporting</h2>
 <p>We use PostHog (EU server) for anonymous usage analytics — such as which features are used — to help us improve the app. No personal information is linked to this data. We use Sentry for automatic error reporting, which helps us quickly identify and fix bugs. Error reports may contain technical device information but no personal data.</p>
 
+<h2>Notifications and reminders</h2>
+<p>Kvitto sends push notifications for weekly AI coach insights, budget warnings, warranty reminders, and activity reminders. You can disable all notifications in the app settings or your device system settings.</p>
+
 <h2>Subscriptions and payments</h2>
-<p>Payments are handled by Google Play and RevenueCat. We never store card details or payment information directly.</p>
+<p>Payments are handled by Google Play, App Store and RevenueCat. We never store card details or payment information directly.</p>
 
 <h2>Cookies</h2>
 <p>The Kvitto app uses no cookies. Our website uses no tracking cookies.</p>
 
 <h2>Your rights (GDPR)</h2>
-<p>You have the right to access, correct, or delete your data, and to object to processing. Contact us and we will help you.</p>
+<p>You have the right to access, correct, or delete your data, and to object to processing. You can delete your account and all associated data directly in the app under Settings → Account → Delete Account. Contact us for other requests.</p>
 
 <h2>Changes</h2>
 <p>For significant changes to this policy, we will notify you by email or within the app.</p>
