@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -16,129 +16,151 @@
 </style>
 </head>
 <body>
-
 <p>
-  <span class="lang" onclick="show('sv')" id="btn-sv">🇸🇪 Svenska</span>
-  <span class="lang" onclick="show('en')" id="btn-en">🇬🇧 English</span>
+  <span class="lang" onclick="show('sv')">🇸🇪 Svenska</span>
+  <span class="lang" onclick="show('en')">🇬🇧 English</span>
+  <span class="lang" onclick="show('no')">🇳🇴 Norsk</span>
+  <span class="lang" onclick="show('da')">🇩🇰 Dansk</span>
 </p>
-
 <div class="section active" id="sv">
 <h1>Integritetspolicy för Kvitto</h1>
-<p>Senast uppdaterad: 2026-06-14</p>
-
+<p>Senast uppdaterad: 2026-06-23</p>
 <h2>Vilka uppgifter samlar vi in?</h2>
 <p>— E-postadress (vid registrering)<br>
 — Bilder på kvitton (bearbetas tillfälligt av AI, lagras ej i molnet)<br>
 — Extraherad kvittoinformation (butik, datum, artiklar, priser)<br>
-— Vidarebefordrade e-postkvitton (innehåll bearbetas för att extrahera kvittodata, rådata lagras ej)<br>
+— Vidarebefordrade e-postkvitton (innehåll bearbetas, rådata lagras ej)<br>
 — Garantiinformation (produktnamn, inköpsdatum, garantilängd)<br>
 — Prishistorik per artikel (anonymt aggregerad)<br>
 — Familjedelningsdata (kvitton och garantier delade inom familjegrupp)<br>
 — Utgiftssplittar (kvittokostnader delade mellan familjemedlemmar)<br>
 — Anpassade kategorier och mappar (synkroniserade till molnet)<br>
+— <strong>Körjournal</strong> (datum, avstånd, från/till-ort, syfte — lagras lokalt, laddas aldrig upp)<br>
+— <strong>Företagsprofil</strong> (företagsnamn, org.nr, momsregistreringsnr, adress — lagras lokalt)<br>
 — Anonym användningsdata (via PostHog Analytics)<br>
 — Felrapporter (via Sentry)<br>
 — Senaste appöppning (lagras lokalt för påminnelsenotiser)</p>
-
 <h2>Hur använder vi dina uppgifter?</h2>
 <p>Dina uppgifter används enbart för att tillhandahålla appens funktioner. Vi säljer aldrig dina uppgifter till tredje part.</p>
-
 <h2>AI-bearbetning</h2>
-<p>Kvittobilder och extraherad kvittodata skickas till Anthropic Claude API för textextraktion och AI-coach-insikter. Bilderna lagras inte permanent — endast den extraherade texten sparas. Coach-chatkonversationer bearbetas av Anthropic API men lagras inte i sin helhet. Anthropic tränar inte sina modeller på API-data som standard.</p>
-
+<p>Kvittobilder och extraherad kvittodata skickas till Anthropic Claude API för textextraktion och AI-coach-insikter. Bilderna lagras inte permanent — endast den extraherade texten sparas. Anthropic tränar inte sina modeller på API-data som standard.</p>
+<h2>Revisorexport</h2>
+<p>Kvitto Business låter dig exportera ett paket med kvitton, körjournal och sammanfattning för att dela med din revisor. Exporten initieras alltid av dig manuellt via enhetens delningsfunktion. Den delade filen hanteras av mottagande part. Vi laddar aldrig upp exportfiler till Kvittos servrar.</p>
 <h2>Reklam</h2>
-<p>Gratisversionen av Kvitto visar annonser via Google AdMob. AdMob kan samla in reklamidentifierare och användningsdata för att visa relevanta annonser. Premiumanvändare ser inga annonser. Du kan hantera dina annonsinställningar i enhetens systeminställningar.</p>
-
+<p>Gratisversionen av Kvitto visar annonser via Google AdMob. Premiumanvändare ser inga annonser.</p>
 <h2>Datalagring och kvarhållning</h2>
-<p>Dina kvitton lagras säkert i Supabase med kryptering. Kvittohistorik sparas i <strong>12 månader</strong> från skanningsdatumet, varefter de raderas automatiskt. Kvittofotografier lagras enbart lokalt på enheten och laddas aldrig upp till molnet. Vid avinstallation eller kontoborttagning raderas lokala foton permanent. Du kan exportera dina kvitton som CSV, JSON eller PDF när som helst. Vid kontoborttagning raderas all molndata inom 30 dagar. Du kan när som helst radera ditt konto via appens inställningar.</p>
-
+<p>Kvitton lagras säkert i Supabase med kryptering i <strong>12 månader</strong>. Kvittofotografier, körjournal och företagsprofil lagras enbart lokalt och laddas aldrig upp. Vid kontoborttagning raderas all molndata inom 30 dagar.</p>
 <h2>Familjedelning</h2>
-<p>Om du använder familjedelning delas dina kvitton och garantier med medlemmar i din familjegrupp. Familjemedlemmar kan se delade kvitton och garantier men inte redigera eller radera varandras data. Du kan lämna eller upplösa familjegruppen när som helst via inställningarna.</p>
-
+<p>Kvitton och garantier delas med din familjegrupp. Medlemmar kan se men inte redigera varandras data.</p>
 <h2>Analys och felrapportering</h2>
-<p>Vi använder PostHog (EU-server) för anonym användaranalys — t.ex. hur många som använder olika funktioner — för att förbättra appen. Ingen personlig information kopplas till dessa data. Vi använder Sentry för automatisk felrapportering, vilket hjälper oss att snabbt identifiera och åtgärda buggar. Felrapporter kan innehålla teknisk information om enheten men ingen personlig data.</p>
-
-<h2>Notiser och påminnelser</h2>
-<p>Kvitto skickar push-notiser för veckliga AI-coach-insikter, budgetvarningar, garantipåminnelser och aktivitetspåminnelser. Du kan stänga av alla notiser i appens inställningar eller enhetens systeminställningar.</p>
-
-<h2>Prenumerationer och betalningar</h2>
-<p>Betalningar hanteras av Google Play, App Store och RevenueCat. Vi lagrar aldrig kortuppgifter eller betalningsinformation direkt.</p>
-
-<h2>Cookies</h2>
-<p>Kvitto-appen använder inga cookies. Vår webbplats använder inga spårningscookies.</p>
-
+<p>Vi använder PostHog (EU-server) för anonym analys och Sentry för felrapportering. Ingen personlig information kopplas till dessa data.</p>
 <h2>Dina rättigheter (GDPR)</h2>
-<p>Du har rätt att begära ut, rätta eller radera dina uppgifter, samt invända mot behandling. Du kan radera ditt konto och all tillhörande data direkt i appen under Inställningar → Konto → Radera konto. Kontakta oss för övriga förfrågningar.</p>
-
-<h2>Ändringar</h2>
-<p>Vid väsentliga ändringar av denna policy meddelas du via e-post eller i appen.</p>
-
+<p>Du har rätt att begära ut, rätta eller radera dina uppgifter. Radera konto via Inställningar → Konto → Radera konto.</p>
 <h2>Kontakt</h2>
 <p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
 </div>
-
 <div class="section" id="en">
 <h1>Privacy Policy — Kvitto</h1>
-<p>Last updated: 2026-06-14</p>
-
+<p>Last updated: 2026-06-23</p>
 <h2>What data do we collect?</h2>
 <p>— Email address (on registration)<br>
 — Receipt images (processed temporarily by AI, not stored in cloud)<br>
 — Extracted receipt data (store, date, items, prices)<br>
-— Forwarded email receipts (content processed to extract receipt data, raw email not stored)<br>
+— Forwarded email receipts (content processed, raw email not stored)<br>
 — Warranty information (product name, purchase date, warranty duration)<br>
 — Item price history (anonymously aggregated)<br>
 — Family sharing data (receipts and warranties shared within family group)<br>
 — Expense splits (receipt costs shared between family members)<br>
 — Custom categories and folders (synced to cloud)<br>
+— <strong>Mileage log</strong> (date, distance, from/to location text, purpose — stored locally, never uploaded)<br>
+— <strong>Business profile</strong> (company name, organisation number, VAT number, address — stored locally)<br>
 — Anonymous usage data (via PostHog Analytics)<br>
 — Error reports (via Sentry)<br>
 — Last app open date (stored locally for re-engagement notifications)</p>
-
 <h2>How do we use your data?</h2>
 <p>Your data is used solely to provide the app's features. We never sell your data to third parties.</p>
-
 <h2>AI processing</h2>
-<p>Receipt images and extracted receipt data are sent to Anthropic's Claude API for text extraction and AI coach insights. Images are not stored permanently — only the extracted text is saved. Coach chat conversations are processed by Anthropic's API but not stored in full. Anthropic does not train its models on API data by default.</p>
-
+<p>Receipt images and extracted data are sent to Anthropic's Claude API for text extraction and AI coach insights. Images are not stored permanently. Anthropic does not train its models on API data by default.</p>
+<h2>Accountant export</h2>
+<p>Kvitto Business lets you export a bundle (receipts, mileage log, summary) for sharing with your accountant. Exports are always manually initiated by you via your device's share sheet. The shared file is governed by the receiving party's privacy policy. We never upload export files to Kvitto's servers.</p>
 <h2>Advertising</h2>
-<p>The free version of Kvitto displays advertisements via Google AdMob. AdMob may collect advertising identifiers and usage data to serve relevant ads. Premium users see no ads. You can manage your ad preferences in your device system settings.</p>
-
+<p>The free version of Kvitto displays ads via Google AdMob. Premium users see no ads.</p>
 <h2>Data storage and retention</h2>
-<p>Your receipts are stored securely in Supabase with encryption. Receipt history is retained for <strong>12 months</strong> from the date of scanning, after which it is automatically deleted. Receipt photos are stored locally on your device only and are never uploaded to the cloud. Upon uninstall or account deletion, local photos are permanently removed. You can export your receipts as CSV, JSON or PDF at any time. Upon account deletion, all cloud data is removed within 30 days. You can delete your account at any time from the app settings.</p>
-
+<p>Receipts are stored securely in Supabase with encryption for <strong>12 months</strong>. Receipt photos, mileage log entries, and business profile data are stored locally only and never uploaded. Upon account deletion, all cloud data is removed within 30 days.</p>
 <h2>Family sharing</h2>
-<p>If you use family sharing, your receipts and warranties are shared with members of your family group. Family members can view shared receipts and warranties but cannot edit or delete each other's data. You can leave or dissolve the family group at any time from settings.</p>
-
+<p>Receipts and warranties are shared with your family group members. Members can view but not edit each other's data.</p>
 <h2>Analytics and error reporting</h2>
-<p>We use PostHog (EU server) for anonymous usage analytics — such as which features are used — to help us improve the app. No personal information is linked to this data. We use Sentry for automatic error reporting, which helps us quickly identify and fix bugs. Error reports may contain technical device information but no personal data.</p>
-
-<h2>Notifications and reminders</h2>
-<p>Kvitto sends push notifications for weekly AI coach insights, budget warnings, warranty reminders, and activity reminders. You can disable all notifications in the app settings or your device system settings.</p>
-
-<h2>Subscriptions and payments</h2>
-<p>Payments are handled by Google Play, App Store and RevenueCat. We never store card details or payment information directly.</p>
-
-<h2>Cookies</h2>
-<p>The Kvitto app uses no cookies. Our website uses no tracking cookies.</p>
-
+<p>We use PostHog (EU server) for anonymous usage analytics and Sentry for error reporting. No personal information is linked to this data.</p>
 <h2>Your rights (GDPR)</h2>
-<p>You have the right to access, correct, or delete your data, and to object to processing. You can delete your account and all associated data directly in the app under Settings → Account → Delete Account. Contact us for other requests.</p>
-
-<h2>Changes</h2>
-<p>For significant changes to this policy, we will notify you by email or within the app.</p>
-
+<p>You have the right to access, correct, or delete your data. Delete your account under Settings → Account → Delete Account.</p>
 <h2>Contact</h2>
 <p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
 </div>
-
+<div class="section" id="no">
+<h1>Personvernerklæring — Kvitto</h1>
+<p>Sist oppdatert: 2026-06-23</p>
+<h2>Hvilke opplysninger samler vi inn?</h2>
+<p>— E-postadresse (ved registrering)<br>
+— Kvitteringsbilder (behandles midlertidig av AI, lagres ikke i skyen)<br>
+— Uttrukket kvitteringsdata (butikk, dato, varer, priser)<br>
+— Videresendte e-postkvitteringer (innhold behandles, rå e-post lagres ikke)<br>
+— Garantiinformasjon (produktnavn, kjøpsdato, garantilengde)<br>
+— Prishistorikk per vare (anonymt aggregert)<br>
+— Familiedeling (kvitteringer og garantier delt innen familiegruppen)<br>
+— Utgiftsdelinger (kvitteringskostnader delt mellom familiemedlemmer)<br>
+— Egendefinerte kategorier og mapper (synkronisert til skyen)<br>
+— <strong>Kjørelogg</strong> (dato, avstand, fra/til-sted, formål — lagres lokalt, lastes aldri opp)<br>
+— <strong>Bedriftsprofil</strong> (firmanavn, org.nr, MVA-nr, adresse — lagres lokalt)<br>
+— Anonym bruksdata (via PostHog Analytics)<br>
+— Feilrapporter (via Sentry)</p>
+<h2>Hvordan bruker vi opplysningene dine?</h2>
+<p>Opplysningene dine brukes utelukkende til å levere appens funksjoner. Vi selger aldri dataene dine til tredjeparter.</p>
+<h2>AI-behandling</h2>
+<p>Kvitteringsbilder sendes til Anthropics Claude API for tekstutrekking og coach-innsikt. Bildene lagres ikke permanent. Anthropic trener ikke modellene på API-data som standard.</p>
+<h2>Regnskapseksport</h2>
+<p>Kvitto Business lar deg eksportere kvitteringer, kjørelogg og sammendrag for deling med regnskapsfører. Eksport initieres alltid manuelt av deg. Vi laster aldri opp eksportfiler til Kvittos servere.</p>
+<h2>Datalagring og oppbevaring</h2>
+<p>Kvitteringer lagres sikkert i Supabase i <strong>12 måneder</strong>. Bilder, kjørelogg og bedriftsprofil lagres kun lokalt. Ved sletting av konto fjernes alle skydata innen 30 dager.</p>
+<h2>Dine rettigheter (GDPR)</h2>
+<p>Du har rett til innsyn i, retting eller sletting av opplysningene dine. Slett konto via Innstillinger → Konto → Slett konto.</p>
+<h2>Kontakt</h2>
+<p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+</div>
+<div class="section" id="da">
+<h1>Privatlivspolitik — Kvitto</h1>
+<p>Sidst opdateret: 2026-06-23</p>
+<h2>Hvilke oplysninger indsamler vi?</h2>
+<p>— E-mailadresse (ved registrering)<br>
+— Kvitteringsbilleder (behandles midlertidigt af AI, gemmes ikke i skyen)<br>
+— Udtrukne kvitteringsoplysninger (butik, dato, varer, priser)<br>
+— Videresendte e-mailkvitteringer (indhold behandles, rå e-mail gemmes ikke)<br>
+— Garantioplysninger (produktnavn, købsdato, garantilængde)<br>
+— Prishistorik pr. vare (anonymt aggregeret)<br>
+— Familiedeling (kvitteringer og garantier delt inden for familiegruppen)<br>
+— Udgiftsdelinger (kvitteringsomkostninger delt mellem familiemedlemmer)<br>
+— Brugerdefinerede kategorier og mapper (synkroniseret til skyen)<br>
+— <strong>Kørselslog</strong> (dato, afstand, fra/til-sted, formål — gemmes lokalt, uploades aldrig)<br>
+— <strong>Virksomhedsprofil</strong> (firmanavn, CVR-nr, momsnr, adresse — gemmes lokalt)<br>
+— Anonym brugsdata (via PostHog Analytics)<br>
+— Fejlrapporter (via Sentry)</p>
+<h2>Hvordan bruger vi dine oplysninger?</h2>
+<p>Dine oplysninger bruges udelukkende til at levere appens funktioner. Vi sælger aldrig dine data til tredjeparter.</p>
+<h2>AI-behandling</h2>
+<p>Kvitteringsbilleder sendes til Anthropics Claude API til tekstudtrækning og coach-indsigt. Billeder gemmes ikke permanent. Anthropic træner ikke modellerne på API-data som standard.</p>
+<h2>Regnskabseksport</h2>
+<p>Kvitto Business lader dig eksportere kvitteringer, kørselslog og oversigt til deling med din revisor. Eksport igangsættes altid manuelt af dig. Vi uploader aldrig eksportfiler til Kvittos servere.</p>
+<h2>Datalagring og -opbevaring</h2>
+<p>Kvitteringer gemmes sikkert i Supabase i <strong>12 måneder</strong>. Billeder, kørselslog og virksomhedsprofil gemmes kun lokalt. Ved sletning af konto fjernes alle skydata inden for 30 dage.</p>
+<h2>Dine rettigheder (GDPR)</h2>
+<p>Du har ret til indsigt i, rettelse eller sletning af dine oplysninger. Slet konto via Indstillinger → Konto → Slet konto.</p>
+<h2>Kontakt</h2>
+<p><a href="mailto:waspstudios@proton.me">waspstudios@proton.me</a></p>
+</div>
 <script>
 function show(lang) {
-  document.getElementById('sv').classList.remove('active');
-  document.getElementById('en').classList.remove('active');
+  ['sv','en','no','da'].forEach(function(l){ document.getElementById(l).classList.remove('active'); });
   document.getElementById(lang).classList.add('active');
 }
 </script>
-
 </body>
 </html>
